@@ -1,9 +1,9 @@
 # coding: utf-8
 
-from login import LoginHandler
+from identity.login import LoginPageHandler
 
 
 url=[
-    (r'',LoginHandler),
+    (r'/login', LoginPageHandler),
 
     ]

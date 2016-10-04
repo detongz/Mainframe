@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url("back.jpg");
+  background: url(../img/back.jpg);
   background-repeat: no-repeat;
 }
 
@@ -73,6 +73,11 @@ h1 {
 .log-status.wrong-entry .form-control, .wrong-entry .form-control + .fa {
   border-color: #ed1c24;
   color: #ed1c24;
+}
+
+.log-status.right-entry .form-control, .right-entry .form-control + .fa {
+  border-color: #0AC986;
+  color: #0AC986;
 }
 
 .log-btn {
