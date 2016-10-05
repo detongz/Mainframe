@@ -3,3 +3,6 @@ mainframe/static/public/*
 */img/*
 .idea/*
 heera/*
+*draft.txt
+*csv*
+*/__pycache__/*
