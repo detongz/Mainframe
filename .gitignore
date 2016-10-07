@@ -1,5 +1,6 @@
 *.pyc
 mainframe/static/public/*
+mainframe/static/userfile/*
 */img/*
 .idea/*
 heera/*

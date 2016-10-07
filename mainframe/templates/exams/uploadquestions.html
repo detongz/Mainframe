@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>上传题库--主机网上学习平台</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+	<!-- Bootstrap  -->
+	<link href="{{static_url('public/css/bootstrap.min.css')}}" rel="stylesheet">
+	<!-- icon fonts font Awesome -->
+	<link href="{{static_url('public/css/font-awesome.min.css')}}" rel="stylesheet">
+	<!-- Import Custom Styles -->
+	<link href="{{static_url('css/style.css')}}" rel="stylesheet">
+	<!-- Import Animate Styles -->
+	<link href="{{static_url('public/css/animate.min.css')}}" rel="stylesheet">
+	<!-- Import Custom Responsive Styles -->
+	<link href="{{static_url('public/css/responsive.css')}}" rel="stylesheet">
+	<link href="{{static_url('css/upload.css')}}" rel="stylesheet">
+</head>
+  	<body class="header-fixed-top">
+      <div id="page-top" class="page-top"></div><!-- /.page-top -->
+      <header id="main-menu" class="main-menu">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-7">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+                  <i class="fa fa-bars"></i>
+                </button>
+                <div class="menu-logo">
+                  <a href="./"><img src="{{static_url('img/logo.png')}}" alt="menu Logo"></a>
+                </div><!-- /.menu-logo -->
+              </div>
+              <nav id="menu" class="menu collapse navbar-collapse">
+                <ul id="headernavigation" class="menu-list nav navbar-nav">
+                  <li><a href="./">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#portfolio">Projects</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li class="active"><a href="#latest-post">Blog</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul><!-- /.menu-list -->
+              </nav><!-- /.menu-list -->
+            </div>
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </header><!-- /#main-menu -->
+      <section id="main-content" class="main-content blog-post-singgle-page">
+        <div class="container">
+          <div class="row">
+						<div class="col-sm-2"></div>
+            <div class="col-sm-8">
+              <div id="blog-post-content" class="blog-post-content">
+                <article class="post type-post">
+                  <div class="post-top">
+                    <div class="post-thumbnail">
+											<h3 class="title"><span class="title-icon ti-comment-alt"></span>上传题目</h3>
+											<img src="{{static_url('img/example-csv.png')}}" alt="Author Image">
+                    </div><!-- /.post-thumbnail -->
+                  </div><!-- /.post-top -->
+                  <div class="post-content">
+                    <h2 class="entry-title"><a href="blog-single.html">Mama HTML5 Portfolio Template</a></h2>
+                    <p class="entry-text">
+                      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore dolore magna aliquyam erat,  sed diam voluptua. At vero eos et accusam et juo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                    </p>
+
+                    <blockquote>
+                      Lorem ipsum dolsit amet, consetetur sadipscing elitsed diam nonumy  eirmod tempor invidunt ut labore dolore magna aliquyam erat,  sed diam voluptua viero eos et accusam et juo dolores et ea rebum.
+                    </blockquote>
+                    <p>
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                      At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sitamet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.  At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
+                    </p>
+                  </div><!-- /.post-content -->
+
+                  <div id="comments" class="comments">
+                    <div class="comments-area">
+
+                      <div id="leave-comment" class="clearfix leave-comment">
+                        <h3 class="title"><span class="title-icon ti-comment-alt"></span>上传题目文件</h3>
+                        <div id="respond">
+													<!-- D&D Zone-->
+								          <div id="drag-and-drop-zone" class="uploader">
+								            <div>请把文件拖放到此处</div>
+								            <div class="or">-或-</div>
+								            <div class="browser">
+								              <label>
+								                <span>点击此处选择文件</span>
+								                <input type="file" name="examfiles" multiple="multiple" title='Click to add Files'>
+								              </label>
+								            </div>
+								          </div>
+								          <!-- /D&D Zone -->
+													<div class="panel panel-default">
+														<div class="panel-heading">
+															<h3 class="panel-title">Uploads</h3>
+														</div>
+														<div class="panel-body demo-panel-files" id='demo-files'>
+															<span class="demo-note">未选择文件...</span>
+														</div>
+													</div>
+													<div class="panel panel-default">
+														<div class="panel-heading">
+															<h3 class="panel-title">Debug</h3>
+														</div>
+														<div class="panel-body demo-panel-debug">
+															<ul id="demo-debug">
+															</ul>
+														</div>
+													</div>
+                        </div><!-- /#respond -->
+                      </div><!-- /#leave-comment -->
+                    </div><!-- /.comment-area -->
+                  </div><!-- /#comment -->
+                </article>
+              </div>
+            </div>
+						<div class="col-sm-2"></div>
+              </div>
+            </div><!-- /.container -->
+          </section><!-- /#main-content -->
+
+          <footer>
+            <div id="footer-top" class="footer-top">
+              <div class="container">
+                <div class="row">
+                  <div id="tweet" class="tweet text-left">
+                    <div class="col-xs-4 about-tweet">
+                      <span class="tweet-icon"><i class="fa fa-twitter"></i></span>
+                      <span class="tweet-author">John Doe</span>
+                      <p class="tweet-details">
+                        Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis eupulvinar nuncint
+                      </p><!-- /.tweet-details -->
+                      <time datetime="PT2H">2 Hours Ago</time>
+                    </div>
+                    <div class="col-xs-4 about-tweet">
+                      <span class="tweet-icon"><i class="fa fa-twitter"></i></span>
+                      <span class="tweet-author">John Doe</span>
+                      <p class="tweet-details">
+                        Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis eupulvinar nuncint
+                      </p><!-- /.tweet-details -->
+                      <time datetime="PT2H">2 Hours Ago</time>
+                    </div>
+                    <div class="col-xs-4 about-tweet">
+                      <span class="tweet-icon"><i class="fa fa-twitter"></i></span>
+                      <span class="tweet-author">John Doe</span>
+                      <p class="tweet-details">
+                        Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis eupulvinar nuncint
+                      </p><!-- /.tweet-details -->
+                      <time datetime="PT2H">2 Hours Ago</time>
+                    </div>
+                  </div><!-- /#tweet -->
+                </div><!-- /.row -->
+              </div><!-- /.container -->
+            </div><!-- /#footer-top -->
+
+            <div id="footer-bottom" class="footer-bottom text-center">
+              <div class="container">
+                <div id="copyright" class="copyright">
+                  &copy; <a href="http://demos.jeweltheme.com/kite">Heera</a>  2015 - Designed &amp; Developed by <a href="http://jeweltheme.com">Jewel Theme</a>
+                </div><!-- /#copyright -->
+              </div>
+            </div><!-- /#footer-bottom -->
+          </footer>
+
+          <div id="scroll-to-top" class="scroll-to-top">
+           <span>
+            <i class="fa fa-chevron-up"></i>
+          </span>
+        </div><!-- /#scroll-to-top -->
+
+        <script src="{{static_url('public/js/modernizr-2.8.3.min.js')}}"></script>
+        <script src="{{static_url('public/js/jquery-2.1.0.min.js')}}"></script>
+        <script src="{{static_url('public/js/plugins.js')}}"></script>
+        <script src="{{static_url('public/js/functions.js')}}"></script>
+        <script src="{{static_url('public/js/wow.min.js')}}"></script>
+				<script src="{{static_url('public/js/dmuploader.js')}}"></script>
+				<script src="{{static_url('public/js/demo.js')}}"></script>
+				<script type="text/javascript">
+					$("#drag-and-drop-zone").dmUploader({
+						url:'/exams/uploadquestions',
+						method:'post',
+						dataType:'json',
+						extFilter:'csv',
+						maxFiles:'99',
+						onFileTypeError: function(file){
+						  console.log("请上传csv格式文件");
+						},
+						onFilesMaxError: function(file){
+						  console.log("单次上传上限暂定为99，请分开上传");
+						},
+						onInit: function(){
+							$.danidemo.addLog('#demo-debug', 'default', '插件正常加载');
+						},
+						onBeforeUpload: function(id){
+							$.danidemo.addLog('#demo-debug', 'default', '开始上传 #' + id);
+
+							$.danidemo.updateFileStatus(id, 'default', '正在上传...');
+						},
+						onNewFile: function(id, file){
+							$.danidemo.addFile('#demo-files', id, file);
+						},
+						onComplete: function(){
+							$.danidemo.addLog('#demo-debug', 'default', '文件传输全部完成');
+						},
+						onUploadProgress: function(id, percent){
+							var percentStr = percent + '%';
+
+							$.danidemo.updateFileProgress(id, percentStr);
+						},
+						onUploadSuccess: function(id, data){
+							$.danidemo.addLog('#demo-debug', 'success', '第 #' + id + ' 文件上传完成');
+
+							$.danidemo.addLog('#demo-debug', 'info', '第 #' + id + ': 文件的服务器响应信息' + JSON.stringify(data));
+
+							$.danidemo.updateFileStatus(id, 'success', '上传完成');
+
+							$.danidemo.updateFileProgress(id, '100%');
+						},
+						onUploadError: function(id, message){
+							$.danidemo.updateFileStatus(id, 'error', message);
+
+							$.danidemo.addLog('#demo-debug', 'error', '第 #' + id + ': 文件上传失败' + message);
+						},
+						onFileExtError: function(file){
+							$.danidemo.addLog('#demo-debug', 'error', '无法上传 \'' + file.name + '\' : 文件必须为csv格是');
+						},
+						onFallbackMode: function(message){
+							$.danidemo.addLog('#demo-debug', 'info', '浏览器不支持: ' + message);
+							// $.danidemo.addLog('#demo-debug', 'info', 'Browser not supported(do something else here!): ' + message);
+						}
+					});
+				</script>
+      </body>
+      </html>

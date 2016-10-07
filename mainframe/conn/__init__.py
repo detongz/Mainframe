@@ -2,12 +2,16 @@
 
 import pymongo
 
-#connect with mongodb
+#connecting mongodb
 conn = pymongo.MongoClient('localhost', 27017)
 
+# database:
 mainframe = conn.mainframe
 
+#collections:
 mainframeusers = mainframe.MainframeUsers
+uploadrecord = mainframe.UploadRecord
+questions = mainframe.Questions
 
 
 if __name__ == '__main__':
