@@ -18,17 +18,16 @@ class UploadQuestions(BaseHandler):
             self.write('请登录')
 
     def post(self):
-        import pdb; pdb.set_trace()
+        print(self.request.files['file'][0]['filename'])
         if not self.AuthTeacherIdentity():
             self.write('请登录')
             return
 
         try:
-            self.SaveFile(GenerateId(),'examfiles')
+            self.SaveFile(GenerateId())
             self.write(json.dumps({'status':'ok'}))
         except Exception as e:
-            # print(e)
-            self.write(json.dumps({'status':'fail'}))
+            print(e)
 
 
 if __name__ == '__main__':

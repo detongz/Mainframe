@@ -9,32 +9,26 @@ class BaseHandler(tornado.web.RequestHandler):
             return 1
         return 0
 
-    def SaveFile(self,name,reqname):
+    def SaveFile(self,name):
         """
         Save files when needed.
         param name string: File name without parameter.
 
-        return a list of successfully stored files.
+        return stored filename.
         """
         import os
 
-        fpath = os.path.join(os.path.dirname(__file__)[:-13],'static/userfile')
+        fpath = os.path.join(os.path.dirname(__file__)[:-8],'static/userfile')
 
-        # request file id : 'csv'
-        files = self.request.files[reqname]
+        f = self.request.files['file'][0]
 
-        l,i = [], 0
         try:
-            for f in files:
-                filename = name + str(i) + '.' + f['filename'].split('.')[-1]
-                filedir = os.join(fpath,filename)
-                with open(filedir,'r') as fi:
-                    fi.write(f['body'])
-                print(filename)
-                i += 1
-                l.append(filename)
+            filename = name + '.' + f['filename'].split('.')[-1]
+            filedir = os.path.join(fpath,filename)
+            with open(filedir,'wb') as fi:
+                fi.write(f['body'])
+            print(filename)
         except Exception as e:
             print(e)
-            print(files)
         finally:
             return filename
