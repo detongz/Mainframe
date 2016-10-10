@@ -24,7 +24,7 @@ class UploadQuestions(BaseHandler):
             return
 
         try:
-            self.SaveFile(GenerateId())
+            self.SaveFile(GenerateId(),'exams')
             self.write(json.dumps({'status':'ok'}))
         except Exception as e:
             print(e)

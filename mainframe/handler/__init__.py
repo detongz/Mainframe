@@ -9,7 +9,7 @@ class BaseHandler(tornado.web.RequestHandler):
             return 1
         return 0
 
-    def SaveFile(self,name):
+    def SaveFile(self,name,fp):
         """
         Save files when needed.
         param name string: File name without parameter.
@@ -18,7 +18,7 @@ class BaseHandler(tornado.web.RequestHandler):
         """
         import os
 
-        fpath = os.path.join(os.path.dirname(__file__)[:-8],'static/userfile')
+        fpath = os.path.join(os.path.dirname(__file__)[:-8],'static/userfile',fp)
 
         f = self.request.files['file'][0]
 

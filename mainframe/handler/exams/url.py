@@ -3,5 +3,5 @@
 from handler.exams import questions
 
 url = [
-    (r'/exams/uploadquestions',questions.UploadQuestions),
+    (r'/exam/uploadquestions',questions.UploadQuestions),
 ]

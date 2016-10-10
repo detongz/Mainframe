@@ -3,6 +3,6 @@
 from handler.identity import auth
 
 url=[
-    (r'/identity/login', auth.LoginPageHandler),
-    (r'/identity/logout', auth.LogoutHandler),
+    (r'/auth/login', auth.LoginPageHandler),
+    (r'/auth/logout', auth.LogoutHandler),
     ]
