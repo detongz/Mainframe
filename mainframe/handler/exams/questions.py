@@ -13,7 +13,11 @@ class UploadQuestions(BaseHandler):
     def get(self):
         print(self.get_cookie('UnameTeacherMainfram'))
         if self.AuthTeacherIdentity():
-            self.render('exams/uploadquestions.html')
+            self.render(
+                        'exams/uploadquestions.html',
+                        uploadpath = '/identity/login',
+                        extfile = 'csv',
+                        )
         else:
             self.write('请登录')
 

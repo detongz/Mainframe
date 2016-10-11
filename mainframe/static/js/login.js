@@ -2,7 +2,7 @@
         $('.log-btn').click(function(){
           $.ajax({
             type:'POST',
-            url:'/identity/login',
+            url:'/auth/login',
             dataType: 'json',
             data: {
               'i':$('#UserName').val(),
@@ -10,7 +10,7 @@
             },
             success:  function(data){
               if(data=="1"){
-                window.location.href='/exams/uploadquestions'
+                window.location.href='/relate/uploadmaterial';
               }
               else if (data=="0") {
                 $('.log-status').addClass('wrong-entry');

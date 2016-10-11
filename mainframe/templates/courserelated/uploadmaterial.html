@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>上传题库--主机网上学习平台</title>
+	<title>上传学习资料--主机网上学习平台</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,6 @@
 	<link href="{{static_url('public/css/animate.min.css')}}" rel="stylesheet">
 	<!-- Import Custom Responsive Styles -->
 	<link href="{{static_url('public/css/responsive.css')}}" rel="stylesheet">
-	<link href="{{static_url('public/css/wangEditor.css')}}" rel="stylesheet">
 	<link href="{{static_url('css/upload.css')}}" rel="stylesheet">
 </head>
   	<body class="header-fixed-top">
@@ -45,60 +44,93 @@
                 </ul><!-- /.menu-list -->
               </nav><!-- /.menu-list -->
             </div>
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </header><!-- /#main-menu -->
       <section id="main-content" class="main-content blog-post-singgle-page">
         <div class="container">
           <div class="row">
-						<div class="col-sm-2"></div>
-						<div class="col-sm-8">
-							<div id="myeditor">
-								<p>
-									请输入内容...
-								</p>
-							</div>
-							<!-- D&D Zone-->
-							<div id="drag-and-drop-zone" class="uploader">
-								<div>请把文件拖放到此处</div>
-								<div class="or">-或-</div>
-								<div class="browser">
-									<label>
-										<span>点击此处选择文件</span>
-										<input type="file" name="examfiles" multiple="multiple" title='Click to add Files'>
-									</label>
-								</div>
-							</div>
-							<!-- /D&D Zone -->
-						</div>
-						<div class="col-sm-2"></div>
-          </div>
-        </div><!-- /.container -->
-      </section><!-- /#main-content -->
-			{% include "footer.html" %}
+            <div class="col-sm-12">
+              <div id="blog-post-content" class="blog-post-content">
+                <article class="post type-post">
+                  <div class="post-top">
+                    <div class="post-thumbnail">
+												<h3 class="title"><span class="title-icon ti-comment-alt"></span>上传学习资料</h3>
+                    </div><!-- /.post-thumbnail -->
+                  </div><!-- /.post-top -->
+                  <div>
+                    <div class="comments-area">
+                      <div id="leave-comment" class="clearfix leave-comment">
+                        <div id="respond">
+													<form>
+															<input class="form-control" type="text" name="title" placeholder="请填写学习资料标题" style="margin-bottom:40px">
+															<textarea name="content" id="content" rows="20" cols="80" style="width:100%;">
+																	请完善学习资料...
+															</textarea>
+													</form>
+													<div class="row" style="margin:40px 0;">
+														<div class="col-sm-5">
+															<div class="panel panel-default">
+																<div class="panel-heading">
+																	<h3 class="panel-title">已上传的文件</h3>
+																</div>
+																<div class="panel-body demo-panel-files" id='demo-files' style="height: 150px; min-height: 0">
+																	<span class="demo-note">未选择文件...</span>
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-7">
+															<!-- D&D Zone-->
+															<div id="drag-and-drop-zone" class="uploader">
+																<div>请把附件拖放到此处</div>
+																<div class="or">-或-</div>
+																<div class="browser">
+																	<label>
+																		<span>点击此处选择文件</span>
+																		<input type="file" name="examfiles" multiple="multiple" title='Click to add Files'>
+																	</label>
+																</div>
+															</div>
+															<!-- /D&D Zone -->
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-sm-4"></div>
+														<div class="col-sm-4">
+															<button type="button" class="btn btn-warning" name="button" style="width:100%;margin:40px 0">发布学习资料</button>
+														</div>
+														<div class="col-sm-4"></div>
+													</div>
+                        </div><!-- /#respond -->
+                      </div><!-- /#leave-comment -->
+                    </div><!-- /.comment-area -->
+                  </div><!-- /#comment -->
+                </article>
+              </div>
+            </div>
+              </div>
+            </div><!-- /.container -->
+          </section><!-- /#main-content -->
+
+					{% include "../public/footer.html" %}
+
           <div id="scroll-to-top" class="scroll-to-top">
            <span>
             <i class="fa fa-chevron-up"></i>
           </span>
         </div><!-- /#scroll-to-top -->
 
-
-
-        <!-- Include modernizr-2.8.3.min.js -->
         <script src="{{static_url('public/js/modernizr-2.8.3.min.js')}}"></script>
-        <!-- Include jquery.min.js plugin -->
         <script src="{{static_url('public/js/jquery-2.1.0.min.js')}}"></script>
-        <!-- Javascript Plugins  -->
         <script src="{{static_url('public/js/plugins.js')}}"></script>
-        <!-- Custom Functions  -->
         <script src="{{static_url('public/js/functions.js')}}"></script>
-				<script src="{{static_url('public/js/wow.min.js')}}"></script>
-				<script src="{{static_url('public/js/wangEditor.js')}}"></script>
+        <script src="{{static_url('public/js/wow.min.js')}}"></script>
 				<script src="{{static_url('public/js/dmuploader.js')}}"></script>
 				<script src="{{static_url('public/js/demo.js')}}"></script>
+				<script src="{{static_url('public/ckeditor/ckeditor.js')}}"></script>
 				<script src="{{static_url('js/uploadfile.js')}}"></script>
 				<script type="text/javascript">
-				$(function () {
-					var editor = new wangEditor('myeditor');
-					editor.create();
-				});
+					var editor = CKEDITOR.replace( 'content');
 				</script>
       </body>
       </html>

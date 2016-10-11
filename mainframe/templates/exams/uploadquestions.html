@@ -55,33 +55,22 @@
               <div id="blog-post-content" class="blog-post-content">
                 <article class="post type-post">
                   <div class="post-top">
-                    <div class="post-thumbnail">
-											<h3 class="title"><span class="title-icon ti-comment-alt"></span>上传题目</h3>
-											<img src="{{static_url('img/example-csv.png')}}" alt="Author Image">
+                    <div class="post-thumbnail leave-comment">
+											<h3  class="title"><span class="title-icon ti-comment-alt"></span>上传题目</h3>
+											<img src="{{static_url('img/example-csv.png')}}">
                     </div><!-- /.post-thumbnail -->
                   </div><!-- /.post-top -->
-                  <div class="post-content">
-                    <h2 class="entry-title"><a href="blog-single.html">Mama HTML5 Portfolio Template</a></h2>
-                    <p class="entry-text">
-                      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore dolore magna aliquyam erat,  sed diam voluptua. At vero eos et accusam et juo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                    </p>
-
-                    <blockquote>
-                      Lorem ipsum dolsit amet, consetetur sadipscing elitsed diam nonumy  eirmod tempor invidunt ut labore dolore magna aliquyam erat,  sed diam voluptua viero eos et accusam et juo dolores et ea rebum.
-                    </blockquote>
-                    <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                      At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sitamet, consetetur sadipscing elitr,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.  At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
-                    </p>
+                  <div style="padding:0">
+										<h4>说明	</h4>
+                    <p>题库中关于一道题的所有信息占一行, 即每一行为一道题.</p>
+										<p>第一列为题目属性，五种题型分别对应五个数字，单项选择为1，多项选择为2，判断题为3，填空题为4，简答题为5，填写时填改行题目类型对应的数字.</p>
+										<p>第二列为题目描述，填写相关文字.</p>
+										<p>第三列为答案，简答题建议留作作业. 单选、多选和判断需要指定答案，多选答案请根据字母顺序排列, 简答题和填空题可以空缺. 填空题答案请尽量避免有特殊字符，如果有特殊字符请保证字符为英文字符，中文字符会不予识别. </p>
+										<p>第四列及第四列后填入选择、多选、判断的选项，根绝字母顺序依次排列，并把选项和选项内容使用英文符号"."隔开，如：“A.***”.</p>
+										<p>当前仅支持csv格式文件.</p>
                   </div><!-- /.post-content -->
 
-                  <div id="comments" class="comments">
-                    <div class="comments-area">
-
-                      <div id="leave-comment" class="clearfix leave-comment">
+                      <div id="leave-comment" class="leave-comment">
                         <h3 class="title"><span class="title-icon ti-comment-alt"></span>上传题目文件</h3>
                         <div id="respond">
 													<!-- D&D Zone-->
@@ -98,13 +87,15 @@
 								          <!-- /D&D Zone -->
 													<div class="panel panel-default">
 														<div class="panel-heading">
-															<h3 class="panel-title">Uploads</h3>
+															<h3 class="panel-title">
+																已上传的文件
+															</h3>
 														</div>
 														<div class="panel-body demo-panel-files" id='demo-files'>
 															<span class="demo-note">未选择文件...</span>
 														</div>
 													</div>
-													<div class="panel panel-default">
+													<div class="panel panel-default" hidden="hidden">
 														<div class="panel-heading">
 															<h3 class="panel-title">Debug</h3>
 														</div>
@@ -115,8 +106,6 @@
 													</div>
                         </div><!-- /#respond -->
                       </div><!-- /#leave-comment -->
-                    </div><!-- /.comment-area -->
-                  </div><!-- /#comment -->
                 </article>
               </div>
             </div>
@@ -125,7 +114,7 @@
             </div><!-- /.container -->
           </section><!-- /#main-content -->
 
-					{% include "footer.html" %}
+					{% include "../public/footer.html" %}
 
           <div id="scroll-to-top" class="scroll-to-top">
            <span>

@@ -1,7 +1,7 @@
 #coding: utf-8
 
-from upload_material import
+from handler.courserelated import upload_material
 
 url = [
-    (r'',)
+    (r'/relate/uploadmaterial', upload_material.UploadCourseMaterial)
 ]

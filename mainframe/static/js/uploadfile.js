@@ -1,8 +1,8 @@
 $("#drag-and-drop-zone").dmUploader({
-  url:'/exams/uploadquestions',
+  url:'{{uploadpath}}',
   method:'post',
   dataType:'json',
-  extFilter:'csv',
+  extFilter:'{{extfile}}',
   maxFiles:'99',
   onFileTypeError: function(file){
     console.log("请上传csv格式文件");
